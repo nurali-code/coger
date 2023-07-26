@@ -1,0 +1,105 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+
+.products
+    display: flex
+    padding: 0
+    max-width: 1500px 
+    margin: 0 auto 
+    
+
+.product
+    width: 33.3%
+    img 
+        display: block
+        width: 100%
+    &-title
+        display: none
+
+.features
+    padding: 100px 0
+    .container
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &-item
+        min-width: 26%
+        max-width: 32%
+        display: flex
+        align-items: center
+        margin-bottom: 50px
+        img
+            display: inline-block
+            width: 54px
+            height: 54px
+            object-fit: contain
+            margin-right: 30px
+
+        p
+            font-size: 13px
+            text-transform: uppercase
+            line-height: 24px
+            margin: 0
+            color: #e4e1e1
+
+.test
+    padding: 130px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        max-width: 255px
+
+    p
+        border-left: 1px solid #fff
+        padding-left: 45px
+        margin: 0 45px
+        font-size: 20px
+        strong
+            text-transform: uppercase
+            font-size: 17px
+
+.bay
+    padding: 130px 0
+    text-align: center
+    box-shadow: 0px 0px 38.4px 1.6px rgba(0, 0, 0, 0.3)
+    position: relative
+    z-index: 1
+    h2
+        margin-bottom: 70px
+    .wrap
+        align-items: center !important
+    &-item
+        img
+            display: block
+            max-height: 55px
+            object-fit: contain
+
+.medicare
+    padding: 135px 0
+    h2 
+        margin-bottom: 30px
+
+    p 
+        font-size: 18px
+        margin-bottom: 30px
+        max-width: 90%
+
+    &__img
+        width: 130px
+        position: absolute
+        top: 0
+        right: calc( 100% + 20px )
+
+    .container
+        max-width: 930px
+
+    .wrap 
+        img 
+            max-width: 80px 
+            display: inline-block
+
+@import 'footer'

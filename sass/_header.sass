@@ -1,0 +1,46 @@
+.header
+    padding: 38px 0
+    .container
+        display: flex
+        justify-content: space-between
+
+    .logo
+        display: flex
+        align-items: center
+        img
+            display: inline-block
+            width: 144px
+            margin-right: 56px
+        &__text
+            font-size: 18px
+            font-weight: bold
+
+    &__social
+        display: inline-block
+        margin-right: 50px
+        img
+            width: 32px
+        i
+            display: none
+
+    &-right
+        display: flex
+        align-items: center
+
+    .lang
+        background-color: #8b8f99
+        padding: 1px
+        &__item
+            display: inline-block
+            vertical-align: middle
+            padding: 11px 6px 10px
+            color: #fff
+            opacity: .3
+            &.active
+                padding: 11px 13px 10px
+                opacity: 1
+                background-color: #fff
+                color: #000
+
+            &:hover
+                opacity: 1

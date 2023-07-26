@@ -1,0 +1,254 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$black: #000
+$yelow: #ffcc0046
+$third: #3C84AB
+$second: #85CDFD
+$prime: #87d7cf
+
+body
+    min-height: 100vh
+    color: #fff
+    display: flex
+    font-size: 14px
+    flex-direction: column
+    background-color: #181818
+    font-family: 'Roboto', sans-serif
+    scroll-behavior: smooth
+    position: relative
+    z-index: 1
+
+    &.active
+        overflow: hidden
+
+h1,h2,h3,h4,h5,h6
+    font-family: 'Days Sans', sans-serif
+    font-weight: 400
+    line-height: 120%
+    margin: 0 0 20px
+
+h1
+    font-size: 30px
+    line-height: 100%
+
+h2
+    font-size: 22px
+
+h3
+    font-size: 32px
+    margin-bottom: 15px
+
+h4
+    font-weight: 600
+    font-size: 24px
+    margin-bottom: 8px
+
+ul, ol
+    padding-left: 25px
+    margin-bottom: 24px
+    li
+        margin: 0
+        font-size: 20px
+        line-height: 1.3
+        padding: 2px 0
+
+ul
+    list-style: none
+    padding-left: 0
+    li
+        position: relative
+        z-index: 1
+        padding-left: 25px
+        &::before
+            content: '-'
+            display: block
+            position: absolute
+            left: 0
+
+.container
+    width: 100%
+    max-width: 1440px
+    padding: 0 61px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+p
+    font-size: 20px
+    line-height: 1.3
+
+img
+    max-width: 100%
+
+mark
+    background: none !important
+    color: #eb951a
+
+a,
+button
+    color: white
+    transition: all ease .3s
+    background-color: transparent
+    text-decoration: none
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+section
+    padding: 100px 0
+    position: relative
+
+.btn
+    text-transform: uppercase
+    display: inline-block
+    font-family: 'Days Sans', sans-serif
+    padding: 19px 19px 17px
+    font-size: 13px
+    background-color: #047ebf
+    &.red
+        background-color: #a00606
+        &:hover
+            background-color: white
+            color: #a00606
+
+    &-menu
+        z-index: 9999
+        display: inline-block
+        position: relative
+        width: 50px
+        height: 45px
+        background-color: $prime
+        box-shadow: 0px 4px 24px -2px rgba($prime, 0.37)
+        margin: 0
+        span
+            position: absolute
+            top: 50%
+            left: 15%
+            margin-top: -1px
+            display: block
+            width: 70%
+            height: 2px
+            transition: all ease .3s
+            border-radius: 2px
+            background-color: #fff
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                background-color: #fff
+                position: absolute
+                top: 10px
+                left: 0
+                transition: all ease .3s
+                border-radius: 2px
+            &::after
+                top: -10px
+                width: 100%
+                left: 0
+
+        &.active
+            span
+                top: 55%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(-45deg)
+                &::before
+                    background-color: transparent
+                &::after
+                    top: 50%
+                    width: 100%
+                    left: 50%
+                    transform: translate(-50%, -50%) rotate(-90deg)
+
+    &:hover
+        opacity: 1
+        background-color: white
+        color: #047ebf
+
+    &:active
+        opacity: 1
+        transform: scale(.95)
+
+    &[disabled]
+        color: rgba(0, 0, 0, .2)
+        background-color: rgba($prime, .3)
+        cursor: unset
+        animation: none
+        pointer-events: none
+        box-shadow: none
+
+.wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+
+input,
+textarea,
+select
+    display: block
+    width: 100%
+    height: 55px
+    background: #fff
+    font-weight: 500
+    font-size: 14px
+    line-height: 32px
+    padding: 0 20px
+    text-align: left
+    color: $black
+    appearance: none
+    border-radius: 60px
+    border: 1px solid rgba($black, .8)
+    margin-bottom: 16px
+    &::placeholder
+        color: rgba(#000 , .6)
+        font-weight: 300
+
+label
+    color: $black
+    display: block
+    font-weight: 400
+    font-size: 14px
+    line-height: 140%
+    margin-bottom: 2px
+    opacity: .7
+    i
+        color: red
+
+select
+    cursor: pointer
+    background-image: url('../img/arrow-down.svg')
+    background-repeat: no-repeat
+    background-position: center right 18px
+    background-size: 20px auto
+    padding-right: 40px
+    position: relative
+    z-index: 1
+    margin: 0 0 10px
+
+@media screen and ( max-width: 1000px )
+    .btn
+        font-size: 14px
+    h2
+        font-size: 42px
+    p
+        font-size: 16px
+
+@media screen and ( max-width: 700px )
+    .btn
+        font-size: 12px
+        padding: 8px 30px 6px
+
+    section
+        padding: 60px 0
+    h2
+        text-align: center
+        font-size: 32px
