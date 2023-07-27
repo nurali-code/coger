@@ -26,15 +26,31 @@ $(document).ready(function () {
         slidesToShow: 1,
         touchThreshold: 9,
         variableWidth: true,
+        centerMode: true,
         responsive: [
             {
                 breakpoint: 900,
                 settings: {
                     centerPadding: '20px',
-                    centerMode: true,
                 }
             }
         ]
+    });
+
+    $('.main-slider').slick({
+        infinite: true,
+        speed: 300,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        arrows: false,
+        centerPadding: '0',
+        fade: true,
+        dots: false,
+        swipeToSlide: true,
+        slidesToShow: 1,
+        touchThreshold: 9,
+        variableWidth: false,
+        centerMode: true,
     });
 
 

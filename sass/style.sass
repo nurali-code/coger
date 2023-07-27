@@ -3,6 +3,119 @@
 @import 'slick'
 @import 'header'
 
+.main
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &-man
+        position: relative
+        z-index: 111
+        width: 100%
+        text-align: center
+        pointer-events: none
+        img
+            display: block
+            width: 420px
+            max-width: 30%
+            object-fit: contain
+            object-position: center bottom
+            height: 85vh
+            max-height: 900px
+            margin: 0 auto
+
+    &-slider
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 1
+
+    .container
+        padding: 0
+        margin: 0 auto
+        max-width: 1090px
+        height: 85vh
+        max-height: 900px
+        position: relative
+        z-index: 1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &::before
+            content: ''
+            display: block
+            width: 380px
+            height: 380px
+            max-width: 30vw
+            max-height: 30vw
+            aspect-ratio: 1/1
+            border-radius: 380px
+            background: #CE0C11
+            position: absolute
+            z-index: -1
+            top: 40%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+        &.blue::before
+            background: #056BB0
+        &.purple::before
+            background: #781069
+
+    &-item
+        width: 300px
+        img
+            margin-bottom: 20px
+
+        &.left
+            text-align: right
+            img
+                display: block
+                margin: 0 0 0 auto
+
+    &__fill
+        display: inline-block
+        text-transform: uppercase
+        font-size: 13px
+        line-height: 150%
+        &::before
+            content: ''
+            display: inline-block
+            vertical-align: top
+            margin-top: 4px
+            margin-right: 12px
+            width: 10px
+            height: 10px
+            background-color: #fff
+
+    &__heading
+        font-weight: bold
+        font-size: 20px
+        margin-bottom: 38px
+
+    &__text
+        font-size: 16px
+        margin-bottom: 47px
+
+    &-img
+        display: inline-block
+        position: absolute
+        &.first
+            width: 240px
+            bottom: -20px
+            left: -277px
+            transform: rotate(-40deg)
+        &.second
+            width: 142px
+            top: 10%
+            right: -186px
+            transform: rotate(30deg)
+
+        img
+            display: block
+            width: 100%
+
 .products
     display: flex
     padding: 0
@@ -25,7 +138,7 @@
         transition: all ease .3s
         opacity: 0
         visibility: hidden
-        transform: translateY(-60%)
+        transform: translateY(-40%)
         top: 50%
         left: 0
         width: 100%
@@ -60,6 +173,7 @@
     &__info
         font-size: 16px
         margin-bottom: 20px
+
     &__footer
         font-size: 18px
         font-weight: 300
@@ -79,7 +193,7 @@
 
 .features
     padding: 100px 0 50px
-    // box-shadow: 0px 0px 38.4px 1.6px rgba(0, 0, 0, 0.3)
+    box-shadow: 0px 0px 38.4px 1.6px rgba(0, 0, 0, 0.3)
     position: relative
     z-index: 99
     .container
@@ -222,6 +336,67 @@
                 font-size: 12px
 
 @media screen and ( max-width: 900px )
+    .main
+        &-man
+            text-align: left
+            max-width: 390px
+            margin: 0 auto 
+            img
+                margin: 0 auto 0 10px
+                width: 60vw
+                max-width: 60vw
+                height: 340px
+                object-position: left bottom
+
+        &-img
+            &.first
+                left: -10px
+                bottom: -5px
+                width: 10%
+                min-width: 42px
+            &.second
+                top: 3%
+                right: -10px
+                min-width: 66px
+                width: 15%
+
+        &-item
+            width: 50%
+            margin: 0 0 0 auto
+            text-align: left !important
+            align-self: flex-end
+            display: inline-flex
+            flex-direction: column-reverse
+            &.right
+                display: none
+
+            img
+                height: 220px
+                object-fit: contain
+
+        &__fill
+            font-size: 9px
+            padding-left: 16px
+            position: relative
+            &::before
+                width: 6px
+                height: 6px
+                position: absolute
+                top: 0
+                left: 0
+
+        .container
+            max-width: 390px
+            height: 340px
+            justify-content: flex-end
+            &::before
+                left: 8%
+                width: 152px
+                height: 152px
+                max-width: unset
+                max-height: unset
+                transform: translate(0%, -69%)
+
     .features
         padding: 50px 0 20px
         &-item
@@ -284,7 +459,7 @@
     .medicare
         padding: 70px 0
         &__img
-            max-width: 75px 
+            max-width: 75px
             display: block
             margin: 0 auto 30px
         .wrap
