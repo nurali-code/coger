@@ -119,54 +119,14 @@ section
             color: #a00606
 
     &-menu
-        z-index: 9999
-        display: inline-block
-        position: relative
-        width: 50px
-        height: 45px
-        background-color: $prime
-        box-shadow: 0px 4px 24px -2px rgba($prime, 0.37)
-        margin: 0
-        span
-            position: absolute
-            top: 50%
-            left: 15%
-            margin-top: -1px
-            display: block
-            width: 70%
-            height: 2px
-            transition: all ease .3s
-            border-radius: 2px
-            background-color: #fff
-            &::before,
-            &::after
-                content: ''
-                display: block
-                width: 100%
-                height: 2px
-                background-color: #fff
-                position: absolute
-                top: 10px
-                left: 0
-                transition: all ease .3s
-                border-radius: 2px
-            &::after
-                top: -10px
-                width: 100%
-                left: 0
-
+        display: none
+        background-image: url('../img/menu.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        width: 32px
+        height: 32px
         &.active
-            span
-                top: 55%
-                left: 50%
-                transform: translate(-50%, -50%) rotate(-45deg)
-                &::before
-                    background-color: transparent
-                &::after
-                    top: 50%
-                    width: 100%
-                    left: 50%
-                    transform: translate(-50%, -50%) rotate(-90deg)
+            background-image: url('../img/menu-arrow.svg')
 
     &:hover
         opacity: 1
@@ -234,21 +194,19 @@ select
     z-index: 1
     margin: 0 0 10px
 
-@media screen and ( max-width: 1000px )
-    .btn
-        font-size: 14px
-    h2
-        font-size: 42px
-    p
+@media screen and ( max-width: 1200px )
+    .btn 
+        font-size: 10px
+        padding: 13px 13px 12px
+
+    h2 
         font-size: 16px
 
-@media screen and ( max-width: 700px )
+@media screen and ( max-width: 1000px )
     .btn
-        font-size: 12px
-        padding: 8px 30px 6px
 
-    section
-        padding: 60px 0
+@media screen and ( max-width: 700px )
+    .container 
+        padding: 0 20px
+
     h2
-        text-align: center
-        font-size: 32px

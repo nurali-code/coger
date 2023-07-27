@@ -18,7 +18,8 @@
     &-list
         position: relative
         overflow: hidden
-        display: block
+        // display: flex
+        // align-items: center
         margin: 0
         padding: 0
         &:focus
@@ -28,10 +29,7 @@
             cursor: hand
 
     &-slider
-        padding-bottom: 40px
-        width: calc( 100% + 6px )
         position: relative
-        left: -3px
         .slick-track,
         .slick-list
             -webkit-transform: translate3d(0, 0, 0)
@@ -44,7 +42,8 @@
         position: relative
         left: 0
         top: 0
-        display: block
+        display: flex
+        align-items: center
         margin-left: auto
         margin-right: auto
 
@@ -111,7 +110,7 @@
 
         &::before
             display: none
-    
+
     &-prev
         left: calc((100% - 1300px)/2)
         transform: scale(-1) !important
@@ -124,7 +123,7 @@
         pointer-events: none
         filter: grayscale(10)
         opacity: .5
-    
+
     &-dots
         display: block
         position: absolute
@@ -157,16 +156,16 @@
                 background-color: #fff
 
     @media screen and ( max-width: 1300px )
-        &-arrow 
+        &-arrow
             width: 40px
             height: 40px
-        
-        &-prev 
+
+        &-prev
             left: 16px
-        
-        &-next 
+
+        &-next
             right: 16px
 
     @media screen and ( max-width: 700px )
-        &-prev 
+        &-prev
             display: none

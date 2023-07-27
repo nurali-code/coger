@@ -1,24 +1,87 @@
 @import 'normolize'
 @import 'elements'
+@import 'slick'
 @import 'header'
 
 .products
     display: flex
     padding: 0
-    max-width: 1500px 
-    margin: 0 auto 
-    
+    max-width: 1500px
+    margin: 0 auto
 
 .product
     width: 33.3%
-    img 
+    position: relative
+    z-index: 1
+    img
         display: block
         width: 100%
+
     &-title
-        display: none
+        height: 100%
+        position: absolute
+        background-color: #820302
+        padding: 40px 50px
+        transition: all ease .3s
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-60%)
+        top: 50%
+        left: 0
+        width: 100%
+        min-height: 110%
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        align-items: center
+        flex-direction: column
+        p
+            line-height: 140%
+
+        &.blue
+            background-color: #056bb0
+        &.purple
+            background-color: #83009f
+
+    &__descr
+        width: 100%
+        text-align: left
+        font-size: 18px
+        line-height: 130% !important
+        margin: 0 0 25px
+        font-weight: 500
+
+    &__text
+        font-size: 15px
+        font-weight: 300
+        width: 100%
+        margin-bottom: 10px
+
+    &__info
+        font-size: 16px
+        margin-bottom: 20px
+    &__footer
+        font-size: 18px
+        font-weight: 300
+        b
+            display: block
+            font-size: 20px
+
+    &-bottom
+        margin: auto 0 0
+
+    &:hover
+        z-index: 999
+        .product-title
+            opacity: 1
+            visibility: visible
+            transform: translateY(-50%)
 
 .features
-    padding: 100px 0
+    padding: 100px 0 50px
+    // box-shadow: 0px 0px 38.4px 1.6px rgba(0, 0, 0, 0.3)
+    position: relative
+    z-index: 99
     .container
         display: flex
         justify-content: flex-start
@@ -63,6 +126,7 @@
             font-size: 17px
 
 .bay
+    overflow: hidden
     padding: 130px 0
     text-align: center
     box-shadow: 0px 0px 38.4px 1.6px rgba(0, 0, 0, 0.3)
@@ -72,7 +136,9 @@
         margin-bottom: 70px
     .wrap
         align-items: center !important
+
     &-item
+        margin: 0 20px
         img
             display: block
             max-height: 55px
@@ -80,10 +146,10 @@
 
 .medicare
     padding: 135px 0
-    h2 
+    h2
         margin-bottom: 30px
 
-    p 
+    p
         font-size: 18px
         margin-bottom: 30px
         max-width: 90%
@@ -97,9 +163,142 @@
     .container
         max-width: 930px
 
-    .wrap 
-        img 
-            max-width: 80px 
+    .wrap
+        gap: 20px
+        img
+            max-width: 80px
             display: inline-block
 
 @import 'footer'
+
+@media screen and ( max-width: 1300px )
+    .product
+        &-title
+            padding: 30px 30px
+
+    .medicare
+        &__img
+            position: static
+            margin-bottom: 20px
+
+@media screen and ( max-width: 1200px )
+    .features
+        padding: 50px 0 20px
+        &-item
+            display: block
+            text-align: center
+            img
+                margin: 0 0 10px
+
+    .products
+        // display: block
+        flex-wrap: wrap
+        justify-content: center
+
+    .product
+        // width: 50%
+        &-title
+            // padding: 35px 40px
+
+        h2
+            font-size: 20px
+            font-weight: 400
+            margin-bottom: 10px
+
+        &__descr
+            font-size: 12px
+            margin-bottom: 10px
+
+        &__text
+            font-size: 10px
+            line-height: 14px
+
+        &__info
+            font-size: 10px
+
+        &__footer
+            font-size: 11px
+            b
+                font-size: 12px
+
+@media screen and ( max-width: 900px )
+    .features
+        padding: 50px 0 20px
+        &-item
+            margin-bottom: 30px
+
+            p
+                font-size: 9px
+                line-height: 16px
+
+    .products
+        flex-wrap: wrap
+        justify-content: center
+
+    .product
+        width: 50%
+        &-title
+            min-height: 100%
+            padding: 35px 40px
+
+    .test
+        padding: 50px 0
+        max-width: 400px
+        margin: 0 auto
+        flex-wrap: wrap
+        img
+            max-width: 111px
+            text-align: center
+
+        p
+            margin: 0 0 0 15px
+            padding-left: 15px
+            font-size: 11px
+            strong
+                font-size: 12px
+
+        .btn
+            margin-top: 26px
+
+    .bay
+        padding: 50px 0 55px
+        h2
+            margin-bottom: 35px
+        &-item
+            margin: 0 15px
+            img
+                max-height: 35px
+
+@media screen and ( max-width: 700px )
+    .features
+        &-item
+            min-width: unset
+            max-width: unset
+            width: 48%
+    .products
+        display: block
+
+    .product
+        width: 100%
+
+    .medicare
+        padding: 70px 0
+        &__img
+            max-width: 75px 
+            display: block
+            margin: 0 auto 30px
+        .wrap
+            gap: 10px
+            flex-wrap: nowrap
+            img
+                max-height: 24px
+                min-width: unset
+        h2
+            font-size: 10px
+            line-height: 15px
+            margin-bottom: 15px
+
+        p
+            font-size: 11px
+            line-height: 15px
+            margin-bottom: 20px
