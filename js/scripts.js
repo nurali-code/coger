@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $('.bay-slider').slick({
         infinite: true,
-        speed: 300,
+        speed: 800,
         autoplay: true,
         autoplaySpeed: 1000,
         arrows: false,
@@ -40,9 +40,9 @@ $(document).ready(function () {
     $('.main-slider').slick({
         infinite: true,
         speed: 300,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
-        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
         centerPadding: '0',
         fade: true,
         dots: false,
@@ -51,6 +51,14 @@ $(document).ready(function () {
         touchThreshold: 9,
         variableWidth: false,
         centerMode: true,
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
     });
 
 

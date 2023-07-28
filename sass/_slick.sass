@@ -93,30 +93,29 @@
         display: none
 
     &-arrow
-        width: 65px
-        height: 65px
-        background-color: $prime
+        width: 60px
+        height: 30px
+        background-color: transparent
+        // background-color: red
         color: transparent
         position: absolute
-        top: 50%
-        margin-top: -30px
         z-index: 100
+        bottom: 40px
         border: none
-        background-image: url('../img/slider-arrow.svg')
+        background-image: url('../img/menu-arrow.svg')
         background-repeat: no-repeat
         background-position: center center
-        background-size: 60%
-        border-radius: 50%
+        background-size: contain
 
         &::before
             display: none
 
     &-prev
-        left: calc((100% - 1300px)/2)
+        left: calc((100% - 700px)/2)
         transform: scale(-1) !important
 
     &-next
-        right: calc((100% - 1300px)/2)
+        right: calc((100% - 700px)/2)
 
     &-disabled
         cursor: no-drop
