@@ -67,6 +67,7 @@
     &-item
         width: 300px
         img
+            max-width: 250px
             margin-bottom: 20px
 
         &.left
@@ -208,7 +209,7 @@
         font-weight: 300
         width: 100%
         font-size: 15px
-        line-height: 1.2
+        line-height: 18px
 
     &__info
         margin-bottom: 20px
@@ -329,6 +330,16 @@
             display: inline-block
 
 @import 'footer'
+
+@media screen and ( max-width: 1400px )
+    .main
+        &-img
+            &.first
+                left: -177px
+
+            &.second
+                top: 8%
+                right: -120px
 
 @media screen and ( max-width: 1300px )
     .product
