@@ -159,11 +159,14 @@
         display: block
         width: 100%
 
+    h2
+        font-size: 25px
+
     &-title
         height: 100%
         position: absolute
         background-color: #820302
-        padding: 40px 50px
+        padding: 40px 45px
         transition: all ease .3s
         opacity: 0
         visibility: hidden
@@ -171,17 +174,23 @@
         top: 50%
         left: 0
         width: 100%
-        min-height: 110%
+        min-height: 105%
         display: flex
         align-items: center
         justify-content: flex-start
         align-items: center
         flex-direction: column
+        background-repeat: repeat-x
+        background-size: 15px auto 
+        background-position: bottom -8px left
+        background-image: url('../img/tile.svg')
+
         p
             line-height: 140%
 
         &.blue
             background-color: #056bb0
+
         &.purple
             background-color: #83009f
 
